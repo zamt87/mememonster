@@ -26,11 +26,17 @@ class MakeMeme extends React.Component {
   };
 
   componentDidMount() {
-    this.makeTheMeme();
+    //this.makeTheMeme();
+    console.log(this.props);
   }
 
   render() {
-    return <div>Make Meme Folder</div>;
+    return (
+      <div className="wrapper">
+        <h1>Make Your Meme</h1>
+        Make Meme Folder
+      </div>
+    );
   }
 }
 

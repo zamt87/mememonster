@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 class MemeCard extends React.Component {
   constructor(props) {
@@ -15,16 +16,16 @@ class MemeCard extends React.Component {
 
   componentDidMount() {
     this.imageRef.current.addEventListener("load", this.setSpans);
+    console.log(this.props);
   }
 
   render() {
+    const { url, name, id } = this.props.memeInfo;
     return (
       <div style={{ gridRowEnd: `span ${this.state.spans}` }}>
-        <img
-          ref={this.imageRef}
-          src={this.props.memeInfo.url}
-          alt={this.props.memeInfo.name}
-        />
+        <Link to={`/makememe/${id}/${name}/${url}`}>
+          <img ref={this.imageRef} src={url} alt={name} />
+        </Link>
       </div>
     );
   }

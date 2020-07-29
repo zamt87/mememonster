@@ -10,7 +10,7 @@ const App = () => {
       <Router history={history}>
         <Switch>
           <Route exact path="/" component={HomePage} />
-          <Route path="/makememe" component={MakeMeme} />
+          <Route path="/makememe/:id/:name/:url" component={MakeMeme} />
         </Switch>
       </Router>
     </div>
