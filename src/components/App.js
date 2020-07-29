@@ -1,11 +1,18 @@
 import React from "react";
-import "../style/App.scss";
+import { Router, Route, Switch } from "react-router-dom";
+import history from "./history";
 import HomePage from "./HomePage";
+import MakeMeme from "./MakeMeme";
 
 const App = () => {
   return (
-    <div className="App-header">
-      <HomePage />
+    <div>
+      <Router history={history}>
+        <Switch>
+          <Route exact path="/" component={HomePage} />
+          <Route path="/makememe" component={MakeMeme} />
+        </Switch>
+      </Router>
     </div>
   );
 };

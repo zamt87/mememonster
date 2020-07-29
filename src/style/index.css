@@ -38,8 +38,7 @@ li {
 }
 
 .wrapper {
-  width: 100%;
-  max-width: 1200px;
+  width: 95%;
   margin: 0 auto;
   padding: 0 20px;
   -webkit-box-sizing: border-box;
@@ -52,9 +51,25 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #282c34;
+  color: white;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+.meme-list li {
+  float: left;
+  margin-right: 2%;
+  margin-bottom: 2%;
+  width: 18.4%;
+}
+
+.meme-list li:nth-child(5n) {
+  margin-right: 0;
+}
+
+.meme-list li img {
+  width: 100%;
 }
 /*# sourceMappingURL=index.css.map */

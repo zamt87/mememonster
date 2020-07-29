@@ -9,6 +9,7 @@ class HomePage extends React.Component {
     try {
       const memes = await apiroute.get("/get_memes");
       this.setState({ data: memes });
+      console.log(memes);
     } catch (err) {
       console.log(err);
     }
@@ -22,7 +23,12 @@ class HomePage extends React.Component {
     if (!this.state.data) {
       return <div>Loading...</div>;
     }
-    return <HomePageLayout memeDrop={this.state.data.data.data} />;
+    return (
+      <div className="wrapper">
+        <h1>Welcome to Meme Monster</h1>
+        <HomePageLayout memeDrop={this.state.data.data.data} />
+      </div>
+    );
   }
 }
 
