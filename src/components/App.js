@@ -2,7 +2,7 @@ import React from "react";
 import { Router, Route, Switch } from "react-router-dom";
 import history from "./history";
 import HomePage from "./HomePage";
-import MakeMeme from "./MakeMeme";
+import MakeMemePage from "./MakeMemePage";
 
 const App = () => {
   return (
@@ -10,7 +10,7 @@ const App = () => {
       <Router history={history}>
         <Switch>
           <Route exact path="/" component={HomePage} />
-          <Route path="/makememe/:id/:name/:url" component={MakeMeme} />
+          <Route path="/makememe/:id/:name/:url" component={MakeMemePage} />
         </Switch>
       </Router>
     </div>

@@ -16,14 +16,14 @@ class MemeCard extends React.Component {
 
   componentDidMount() {
     this.imageRef.current.addEventListener("load", this.setSpans);
-    console.log(this.props);
   }
 
   render() {
     const { url, name, id } = this.props.memeInfo;
+    const urlEdit = url.slice(22, url.length);
     return (
       <div style={{ gridRowEnd: `span ${this.state.spans}` }}>
-        <Link to={`/makememe/${id}/${name}/${url}`}>
+        <Link to={`/makememe/${id}/${name}/${urlEdit}`}>
           <img ref={this.imageRef} src={url} alt={name} />
         </Link>
       </div>
